@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CobaGoogleMaps2(GooglePlaceSearchWebService)</string>
+    <string name="title_activity_maps">NearbyPlaceForATM</string>
+    <string-array name="radius">
+        <item>1 KM</item>
+        <item>500 M</item>
+        <item>2 KM</item>
+    </string-array>
+
+</resources>

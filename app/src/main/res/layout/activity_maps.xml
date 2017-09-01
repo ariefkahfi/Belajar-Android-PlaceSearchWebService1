@@ -1,0 +1,27 @@
+<RelativeLayout
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+   <fragment android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kahfi.arief.cobagooglemaps2googleplacesearchwebservice.MapsActivity" />
+
+    <Button
+        android:id="@+id/nearbyATM"
+        android:text="Cari Atm terdekat Di Lokasi anda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/acakATM"
+        android:text="Pilih Lokasi dan Cari ATM terdekat"
+        android:textAllCaps="false"
+        android:layout_below="@+id/nearbyATM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
