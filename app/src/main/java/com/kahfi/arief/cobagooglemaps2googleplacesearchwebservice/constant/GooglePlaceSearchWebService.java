@@ -11,7 +11,14 @@ import com.kahfi.arief.cobagooglemaps2googleplacesearchwebservice.R;
 public class GooglePlaceSearchWebService {
 
 
-    public static final String DUMMY_DATA = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-3.6608916,103.7694693&radius=1000&type=atm&key=Hello_world";
+
+    public static int MyRadius ;
+
+    public static String getApiKey(Context context){
+        return
+        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-3.6608916,103.7694693&radius=1000&type=atm&key="+
+        context.getResources().getString(R.string.google_maps_key);
+    }
 
 
     public static String getInstanceWebServiceWithParamLatLngAndType(Context context , double lat, double lng,String type,int radius){

@@ -14,13 +14,7 @@
 
                 android:id="@+id/spinRadius" android:entries="@array/radius" android:layout_width="200dp" android:layout_height="wrap_content"></Spinner>
         </TableRow>
-        <Button
-            android:text="Submit "
-            android:id="@+id/submit"
-            />
-        <ListView android:id="@+id/atmList" android:layout_width="match_parent" android:layout_height="match_parent">
 
-        </ListView>
     </TableLayout>
 
 </LinearLayout>

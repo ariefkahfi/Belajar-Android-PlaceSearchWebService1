@@ -22,8 +22,19 @@ public class AsyncResponse extends AsyncTask<String,Integer,JsonElement> {
 
     private MyJson json;
 
+
+    private boolean useListView;
+
+
+
+
     public AsyncResponse(MyJson json){
         this.json=json;
+    }
+
+    public AsyncResponse(MyJson json, boolean useListView) {
+        this.json = json;
+        this.useListView = useListView;
     }
 
     @Override
@@ -60,7 +71,11 @@ public class AsyncResponse extends AsyncTask<String,Integer,JsonElement> {
     protected void onPostExecute(JsonElement el) {
         super.onPostExecute(el);
         try {
-            json.readThisJSONByInputStreamReader(el);
+            if(useListView){
+                json.readJSONToListView(el);
+            }else{
+                json.readJSONForGoogleMapMarkers(el);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }finally {

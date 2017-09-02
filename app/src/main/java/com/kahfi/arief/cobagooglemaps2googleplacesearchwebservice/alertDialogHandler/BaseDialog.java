@@ -34,9 +34,10 @@ public abstract class BaseDialog extends AlertDialog.Builder implements MyDialog
     }
 
 
-    protected void initializeForLayoutXML( int resource){
+    private void initializeForLayoutXML( int resource){
         this.v = LayoutInflater.from(getContext()).inflate(resource,null);
         setView(v);
+        setTitle(this.title);
     }
 
 }
